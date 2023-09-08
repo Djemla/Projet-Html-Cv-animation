@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realisation de Cv</title>
+
+        <!-- 1. Recuperer la bibliothèque jQuery s'il y en a: passe d'abord en 1ère position-->
+        <script src="./js/jquery-3.7.0.js"></script>
+
+       
+
+        
+        <!-- 3. Recuperer le css style-->
+        <link rel="stylesheet" href="./css/style_Cv.css">
+
+
+</head>
+<body> <!-- Concerne l'ensemble de la page html-->
+    <main> <!-- A voir-->
+        <header> <!--Entête de la page--> 
+            <div class="photo"> <!-- création d'un bloc dans l'entête-->
+            <img id="imgpp" src="./images/WIN_20230327_14_04_42_Pro.jpg" width="50%" height="50%" alt="mon image"> <!--Que veut dire alt ???-->
+            </div>
+            
+
+            <div class="des"> <!-- Creation d'un second bloc pour le nom et le metier.-->
+                <h3>Larissa F</h3> 
+                <p class="post">Développeur</p> <!-- Nouveau pararaphe pour inserer cette phrase-->
+            </div> <!--Si on visualise ce second bloc, on verra qu'il a été crée en dessous de la photo, qui est le premier bloc-->
+       
+
+           
+
+
+            <div class="right"> <!-- Creation d'un bloc coté droit de l'entête-->
+<p><img src="./images/image logo de mail.png" class="info">larisssss@gmail.com</p>
+<p><img src="./images/image logo de maps.png" class="info">Nancy-France</p>
+<p><img src="./images/image logo d'appel.png" class="info">+330000000</p>
+
+
+</div> <!-- On constate que le bloc a été crée tout en dessous, avec les saut de paragraphe-->
+
+</header>
+<section class="animés">
+            
+        <audio id="audio">
+            <source src="./audio/IGxlV251xQ3_Cecilia-Krull---My-Life-Is-Going-On.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playPauseBTN" onclick="playPause()"> &#9658;</button> <!--C'est le caractère du play, ou le petit triangle applati-->
+         <!--Pour mettre des espaces entre 2 elements consecutifs verticalement-->
+        
+      
+        <button id="arret" onclick="stop()"> &#9611;</button> <!--l'émoji de pause, ou le petit triangle applati-->
+        
+
+       
+
+    <div class="anim"> <!--Bloc central de l'entete pour l'animation-->
+        
+        <div class="images">
+            <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/groupe.jfif" alt="image1" > <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Casa de papel</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Rio.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Rio</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Tokyo.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Tokyo</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Denver1.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Denver</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Nairobi.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Nairobi</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Berlin.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Berlin</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/autre2.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Alicia</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Neymar.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Neymar alias Monje</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Raquel2.jfif" alt="image1" /> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>Raquel</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+              <figure class="c-mm__frame">
+                <!--L'élément HTML <figure> représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément <figcaption>. La figure, sa légende et son contenu sont référencés comme une seule unité.-->
+                <img class="c-mm__img" src="./images/Prof.jfif" alt="image1" style="width: 300px;"/> <!--Image-->
+                <figcaption data-caption="bottom left"><I><b>El professor</b></I><div></div></figcaption> <!--legende de l'image-->
+              </figure>
+        
+             
+        </div>
+        
+
+</div>
+</section>
+
+<section class="section-left">
+    <h4>Atouts</h4> <!-- gerer la taille de Atouts-->
+    <hr class="light">
+    <div class="atouts"> <!-- Créer le bloc Atout-->
+    <div>Travail d'équipe</div>
+    <div>hhhhhhhhhhhhhhhh</div>
+    <div>Adaptabilité</div>
+    <div>lllllllllllllll</div>
+</div>  <!-- Fin du bloc Atout-->
+
+<h4>Diplomes et Formation</h4> <!-- gerer la taille de Diplome et formations-->
+    <hr class="light">
+    <div class="div"> <!-- Créer le bloc Atout-->
+    <div><b>Certification de specialisation llllllllll</b>     <!-- b pour mettre en gras-->
+        <strong>entreprise/ecole</strong>Ville, Lieux<br>La date <!-- Saut de ligne pour ecrire la date-->
+    </div>
+
+    <div><b>Certification de specialisation llllllllll</b>     <!-- b pour mettre en gras-->
+        <strong>entreprise/ecole</strong>Ville, Lieux<br>La date <!-- Saut de ligne pour ecrire la date-->
+    </div>
+
+    <h4>Expériences professionnelles</h4> <!-- gerer la taille de Diplome et formations-->
+    <hr class="light">
+    <div class="div">
+    <p><b>stage1</b><strong>(Entreprise), Lieux</strong><br>Date
+    <br>Developpement mmmmmmmmmmm<strong>(Entreprise)</strong></p>
+
+    <p><b>stage2</b><strong>(Entreprise), Lieux</strong><br>Date
+        <br>Developpement mmmmmmmmmmmmmmmmm<strong>(Entreprise)</strong></p>
+
+    </div>
+
+</section>
+
+<section class="section-right">
+    <h4>Compétences</h4> <!-- gerer la taille de compétences-->
+    <hr class="light">
+    <div class="skls"> <!-- Créer le bloc compétences-->
+   
+        <div class="po">     <!-- sous bloc-->
+       <p>html, css, javascript</p> <!-- Paragrapge pour ecrire html, css, javascript-->
+            <div class="cool"> <!--Pour creer le bloc dur-->
+                <div style="width: 80%;" class="inner"></div> <!--Pour creer le bloc dans le bloc dur-->
+    </div> 
+</div>
+
+<div class="po">     <!-- sous bloc-->
+    <p>html, css, javascript</p> <!-- Paragrapge pour ecrire la date-->
+         <div class="cool"> <!--Pour creer le bloc dur-->
+             <div style="width: 80%;" class="inner"></div>
+ </div> 
+</div>
+
+<div class="po">     <!-- sous bloc-->
+    <p>html, css, javascript</p> <!-- Paragrapge pour ecrire la date-->
+         <div class="cool">
+             <div style="width: 80%;" class="inner"></div>
+ </div> 
+</div>
+    
+</div>
+
+<h4>Langues</h4> <!-- gerer la taille de Diplome et formations-->
+<hr class="light">
+<div class="skls">
+    
+    <div class="po">
+        <p>Français</p>
+<div class="cool">
+    <div style="width: 80%;" class="inner"></div>
+</div>
+    </div>
+
+    <div class="po">
+        <p>Anglais</p>
+<div class="cool">
+    <div style="width: 40%;" class="inner"></div>
+</div>
+    </div>
+    <div class="po">
+        <p>Allemand</p>
+<div class="cool">
+    <div style="width: 5%;" class="inner"></div>
+</div>
+    </div>
+
+</div>
+
+<h4>Réseaux sociaux</h4> <!-- gerer la taille de Diplome et formations-->
+<hr class="light">
+<div class="interet">
+<p><img src="./images/image logo facebook.png" class="info"><span>https://www.jjj.fr</span></p>
+<p><img src="./images/image logo linkedin.png" class="info"><span>https://www.jjj.fr</span></p>
+</div>
+
+<h4>Centres d'interêts</h4> <!-- gerer la taille de Diplome et formations-->
+<hr class="light">
+<div class="interet">
+<div><b>Sport</b></div>
+<div><b>Voyage</b></div>
+<div><b>Lecture</b></div>
+
+</div>
+
+</section>
+<!--Fin de la section-->
+
+<div class="srkl">
+
+</div>
+<hr class="light">
+    </main>
+
+     <!-- 2. Recuperer notre fichier JS-->
+     <script src="./js/js_Cv.js"></script>
+
+</body>
+</html>
